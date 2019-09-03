@@ -8,24 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		FC3B30FA231EE93E00FA66F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B30F9231EE93E00FA66F0 /* AppDelegate.swift */; };
-		FC3B30FC231EE93E00FA66F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B30FB231EE93E00FA66F0 /* ViewController.swift */; };
 		FC3B30FF231EE93E00FA66F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3B30FD231EE93E00FA66F0 /* Main.storyboard */; };
 		FC3B3101231EE94000FA66F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3B3100231EE94000FA66F0 /* Assets.xcassets */; };
 		FC3B3104231EE94000FA66F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3B3102231EE94000FA66F0 /* LaunchScreen.storyboard */; };
-		FC3B310D231EEAB800FA66F0 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = FC3B310C231EEAB800FA66F0 /* countries.json */; };
-		FC3B310F231EEB1300FA66F0 /* exchangeRates.json in Resources */ = {isa = PBXBuildFile; fileRef = FC3B310E231EEB1300FA66F0 /* exchangeRates.json */; };
+		FC3B3112231EEBFA00FA66F0 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B3111231EEBFA00FA66F0 /* Country.swift */; };
+		FC3B3114231EEC0F00FA66F0 /* FX.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B3113231EEC0F00FA66F0 /* FX.swift */; };
+		FC3B3117231EED2700FA66F0 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = FC3B3116231EED2700FA66F0 /* countries.json */; };
+		FC3B3119231EED3500FA66F0 /* exchangeRates.json in Resources */ = {isa = PBXBuildFile; fileRef = FC3B3118231EED3500FA66F0 /* exchangeRates.json */; };
+		FC3B311B231EEFCB00FA66F0 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B311A231EEFCB00FA66F0 /* CountryViewController.swift */; };
+		FC3B3120231EF13200FA66F0 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B311F231EF13200FA66F0 /* CountryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC3B30F6231EE93E00FA66F0 /* labConcurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = labConcurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3B30F9231EE93E00FA66F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC3B30FB231EE93E00FA66F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC3B30FE231EE93E00FA66F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC3B3100231EE94000FA66F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3B3103231EE94000FA66F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC3B3105231EE94000FA66F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC3B310C231EEAB800FA66F0 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = countries.json; path = "labConcurrency/New Group/countries.json"; sourceTree = SOURCE_ROOT; };
-		FC3B310E231EEB1300FA66F0 /* exchangeRates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = exchangeRates.json; path = "labConcurrency/New Group/exchangeRates.json"; sourceTree = SOURCE_ROOT; };
+		FC3B3111231EEBFA00FA66F0 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		FC3B3113231EEC0F00FA66F0 /* FX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FX.swift; sourceTree = "<group>"; };
+		FC3B3116231EED2700FA66F0 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		FC3B3118231EED3500FA66F0 /* exchangeRates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exchangeRates.json; sourceTree = "<group>"; };
+		FC3B311A231EEFCB00FA66F0 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		FC3B311F231EF13200FA66F0 /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,32 +64,43 @@
 		FC3B30F8231EE93E00FA66F0 /* labConcurrency */ = {
 			isa = PBXGroup;
 			children = (
+				FC3B3115231EEC1600FA66F0 /* Models */,
 				FC3B3110231EEB9100FA66F0 /* json */,
-				FC3B310B231EE9E200FA66F0 /* Supporting Files */,
-				FC3B30FB231EE93E00FA66F0 /* ViewController.swift */,
+				FC3B311E231EEFE100FA66F0 /* View Controllers */,
 				FC3B30FD231EE93E00FA66F0 /* Main.storyboard */,
+				FC3B30F9231EE93E00FA66F0 /* AppDelegate.swift */,
+				FC3B3100231EE94000FA66F0 /* Assets.xcassets */,
+				FC3B3102231EE94000FA66F0 /* LaunchScreen.storyboard */,
 				FC3B3105231EE94000FA66F0 /* Info.plist */,
 			);
 			path = labConcurrency;
 			sourceTree = "<group>";
 		};
-		FC3B310B231EE9E200FA66F0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FC3B30F9231EE93E00FA66F0 /* AppDelegate.swift */,
-				FC3B3100231EE94000FA66F0 /* Assets.xcassets */,
-				FC3B3102231EE94000FA66F0 /* LaunchScreen.storyboard */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		FC3B3110231EEB9100FA66F0 /* json */ = {
 			isa = PBXGroup;
 			children = (
-				FC3B310C231EEAB800FA66F0 /* countries.json */,
-				FC3B310E231EEB1300FA66F0 /* exchangeRates.json */,
+				FC3B3116231EED2700FA66F0 /* countries.json */,
+				FC3B3118231EED3500FA66F0 /* exchangeRates.json */,
 			);
 			path = json;
+			sourceTree = "<group>";
+		};
+		FC3B3115231EEC1600FA66F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B3111231EEBFA00FA66F0 /* Country.swift */,
+				FC3B3113231EEC0F00FA66F0 /* FX.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FC3B311E231EEFE100FA66F0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B311A231EEFCB00FA66F0 /* CountryViewController.swift */,
+				FC3B311F231EF13200FA66F0 /* CountryDetailViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,10 +161,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC3B310F231EEB1300FA66F0 /* exchangeRates.json in Resources */,
+				FC3B3119231EED3500FA66F0 /* exchangeRates.json in Resources */,
 				FC3B3104231EE94000FA66F0 /* LaunchScreen.storyboard in Resources */,
 				FC3B3101231EE94000FA66F0 /* Assets.xcassets in Resources */,
-				FC3B310D231EEAB800FA66F0 /* countries.json in Resources */,
+				FC3B3117231EED2700FA66F0 /* countries.json in Resources */,
 				FC3B30FF231EE93E00FA66F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,7 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC3B30FC231EE93E00FA66F0 /* ViewController.swift in Sources */,
+				FC3B3114231EEC0F00FA66F0 /* FX.swift in Sources */,
+				FC3B311B231EEFCB00FA66F0 /* CountryViewController.swift in Sources */,
+				FC3B3112231EEBFA00FA66F0 /* Country.swift in Sources */,
+				FC3B3120231EF13200FA66F0 /* CountryDetailViewController.swift in Sources */,
 				FC3B30FA231EE93E00FA66F0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
