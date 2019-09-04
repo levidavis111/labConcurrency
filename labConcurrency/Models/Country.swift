@@ -13,6 +13,13 @@ struct Country: Codable {
     let capital: String
     let population: Int
     let flag: String
+    let currencies: [CurrencyWrapper]
+    
+    struct CurrencyWrapper: Codable {
+        let code: String
+        let name: String
+        let symbol: String
+    }
     
     static func getCountries(from data: Data) -> [Country] {
         do {
@@ -23,5 +30,6 @@ struct Country: Codable {
         }
     }
 }
+
 
 

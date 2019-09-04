@@ -9,22 +9,79 @@
 import UIKit
 
 class CountryViewController: UIViewController {
-
+    
+    var countryArray = [Country]() {
+        didSet {
+            countryTableView.reloadData()
+        }
+    }
+    
+    var searchString: String? = nil {
+        didSet {
+            countryTableView.reloadData()
+        }
+    }
+    
+    var searchResults: [Country] {
+        get {
+            guard let searchString = searchString else {return countryArray}
+            guard searchString != "" else {return countryArray}
+            
+            return countryArray.filter{$0.name.lowercased().contains(searchString)}
+        }
+    }
+    
+    
+    @IBOutlet weak var searchBarOutlet: UISearchBar!
+    @IBOutlet weak var countryTableView: UITableView!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is CountryDetailViewController {
+            guard let indexPath = countryTableView.indexPathForSelectedRow,
+                let countryVC = segue.destination as? CountryDetailViewController else {return}
+            let oneCountry = countryArray[indexPath.row]
+            countryVC.oneCountry = oneCountry
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        countryTableView.delegate = self
+        countryTableView.dataSource = self
+        searchBarOutlet.delegate = self
+        loadData()
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func loadData() {
+        guard let pathToJSONFile = Bundle.main.path(forResource: "countries", ofType: "json") else {return}
+        let url = URL(fileURLWithPath: pathToJSONFile)
+        do {
+            let data = try Data(contentsOf: url)
+            let countriesFromJSON = Country.getCountries(from: data)
+            countryArray = countriesFromJSON
+        } catch let loadDataError {
+            fatalError("Error \(loadDataError)")
+        }
     }
-    */
+    
+}
+
+
+extension CountryViewController: UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return searchResults.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = countryTableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath)
+        let oneCounty = searchResults[indexPath.row]
+        cell.textLabel?.text = oneCounty.name
+        return cell
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchString = searchBar.text?.lowercased()
+    }
 
 }

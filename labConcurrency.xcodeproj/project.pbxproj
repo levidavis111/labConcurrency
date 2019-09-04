@@ -17,6 +17,7 @@
 		FC3B3119231EED3500FA66F0 /* exchangeRates.json in Resources */ = {isa = PBXBuildFile; fileRef = FC3B3118231EED3500FA66F0 /* exchangeRates.json */; };
 		FC3B311B231EEFCB00FA66F0 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B311A231EEFCB00FA66F0 /* CountryViewController.swift */; };
 		FC3B3120231EF13200FA66F0 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B311F231EF13200FA66F0 /* CountryDetailViewController.swift */; };
+		FC3B3122231EFD6F00FA66F0 /* CountryAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B3121231EFD6F00FA66F0 /* CountryAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FC3B3118231EED3500FA66F0 /* exchangeRates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exchangeRates.json; sourceTree = "<group>"; };
 		FC3B311A231EEFCB00FA66F0 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
 		FC3B311F231EF13200FA66F0 /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
+		FC3B3121231EFD6F00FA66F0 /* CountryAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3B3111231EEBFA00FA66F0 /* Country.swift */,
+				FC3B3121231EFD6F00FA66F0 /* CountryAPIClient.swift */,
 				FC3B3113231EEC0F00FA66F0 /* FX.swift */,
 			);
 			path = Models;
@@ -178,6 +181,7 @@
 			files = (
 				FC3B3114231EEC0F00FA66F0 /* FX.swift in Sources */,
 				FC3B311B231EEFCB00FA66F0 /* CountryViewController.swift in Sources */,
+				FC3B3122231EFD6F00FA66F0 /* CountryAPIClient.swift in Sources */,
 				FC3B3112231EEBFA00FA66F0 /* Country.swift in Sources */,
 				FC3B3120231EF13200FA66F0 /* CountryDetailViewController.swift in Sources */,
 				FC3B30FA231EE93E00FA66F0 /* AppDelegate.swift in Sources */,

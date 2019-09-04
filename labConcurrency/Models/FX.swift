@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct FX {
+    let rates: [ExchangeRate]
+    
+    struct ExchangeRate {
+        
+    }
+}
