@@ -54,7 +54,7 @@ class CountryViewController: UIViewController {
     }
     
     private func loadData() {
-        CountryAPIClient.shared.fetchUsers { (result) in
+        CountryAPIClient.shared.fetchData { (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .failure(let error):

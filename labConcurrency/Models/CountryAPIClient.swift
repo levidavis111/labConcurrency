@@ -19,7 +19,7 @@ struct CountryAPIClient {
                 case badDecodeError
             }
 
-            func fetchUsers(completionHandler: @escaping (Result<[Country],Error>) -> () ) {
+            func fetchData(completionHandler: @escaping (Result<[Country],Error>) -> () ) {
                     guard let url = URL(string: urlStr) else {return}
                 URLSession.shared.dataTask(with: url) { (data, response, error) in
 
