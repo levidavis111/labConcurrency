@@ -54,19 +54,19 @@ class CountryViewController: UIViewController {
     }
     
     private func loadData() {
-        guard let pathToJSONFile = Bundle.main.path(forResource: "countries", ofType: "json") else {return}
-        let url = URL(fileURLWithPath: pathToJSONFile)
-        do {
-            let data = try Data(contentsOf: url)
-            let countriesFromJSON = Country.getCountries(from: data)
-            countryArray = countriesFromJSON
-        } catch let loadDataError {
-            fatalError("Error \(loadDataError)")
+        CountryAPIClient.shared.fetchUsers { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .failure(let error):
+                    print(error)
+                case .success(let countries):
+                    self.countryArray = countries
+                }
+            }
         }
+        
     }
-    
 }
-
 
 extension CountryViewController: UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

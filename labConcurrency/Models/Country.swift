@@ -21,7 +21,7 @@ struct Country: Codable {
         let symbol: String
     }
     
-    static func getCountries(from data: Data) -> [Country] {
+    static func getCountries(from data: Data) -> [Country]? {
         do {
             let countryResults = try JSONDecoder().decode([Country].self, from: data)
             return countryResults
